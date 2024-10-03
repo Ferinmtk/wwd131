@@ -1,0 +1,31 @@
+/* Larger view for screens  */
+#hamburger {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+#gallery {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+}
+
+main {
+    width: 75%; 
+}
+
+footer {
+    width: 100%;
+}
