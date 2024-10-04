@@ -4,7 +4,6 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     });
 });
 
-
 document.getElementById('year').textContent = new Date().getFullYear();
 const lastModifiedDate = document.lastModified; 
 document.getElementById('lastModified').textContent = lastModifiedDate; 
