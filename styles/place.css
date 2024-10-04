@@ -82,14 +82,14 @@ header {
 
 /* Ensure the weather icon is sized appropriately */
 .weather-icon {
-    width: 50px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 50px; 
+    height: auto; 
 }
 
-/* Example of hiding the emoticon in smaller views */
+/*  hiding the emoticon  */
 @media (max-width: 768px) {
     footer p {
-        display: none; /* Hide in mobile view */
+        display: none; 
     }
 }
 
@@ -98,7 +98,7 @@ header {
         position: static;  
         width: 80%;  
         margin: 10px auto;  
-        transform: none; /* Reset transform for smaller screens */
+        transform: none; 
     }
 
     .image-container {
@@ -112,10 +112,10 @@ header {
     }
 
     h1 {
-        font-size: 2.5rem; /* Adjust size for header */
+        font-size: 2.5rem; 
     }
     .data h2, .weather h2 {
-        font-size: 1.5rem; /* Adjust subheading sizes */
+        font-size: 1.5rem; 
     }
 }
 
@@ -123,7 +123,7 @@ header {
     background-color: rgba(255, 255, 255, 0.8); 
     color: #007bff; 
     transform: scale(1.05);
-    z-index: 10; /* Bring the hovered element to the front */
+    z-index: 10; 
 }
 
 footer {
