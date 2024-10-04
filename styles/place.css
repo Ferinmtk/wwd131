@@ -3,15 +3,15 @@
     --primary-bg-color: #8b0000;
     --overlay-color: rgba(0, 0, 0, 0.6); 
     --text-color: white; 
-    --font-family: Arial, sans-serif; 
+    --font-family: 'Roboto', sans-serif; /* Updated font-family */
     --padding: 10px; 
 }
-
 
 body {
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0; /* Fallback background */
 }
 
 header {
@@ -34,12 +34,21 @@ header {
     object-fit: cover; 
 }
 
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--padding);
+}
+
 .data, .weather {
     position: absolute;
     background-color: var(--overlay-color);
     padding: var(--padding);
     color: var(--text-color);
     border-radius: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; 
 }
 
 .data {
@@ -54,7 +63,6 @@ header {
     width: 30%;
 }
 
-/* Pseudo Element for Weather Icon */
 .weather::before {
     content: '☁️'; 
     font-size: 2em; 
@@ -64,12 +72,33 @@ header {
     transform: translateX(-50%); 
 }
 
-/* Media Queries for Responsive Design */
+.weather::after {
+    content: '☀️'; /* Example icon after weather info */
+    font-size: 1.5em;
+    position: absolute;
+    bottom: -10px; 
+    right: 10%;
+}
+
+/* Ensure the weather icon is sized appropriately */
+.weather-icon {
+    width: 50px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Example of hiding the emoticon in smaller views */
+@media (max-width: 768px) {
+    footer p {
+        display: none; /* Hide in mobile view */
+    }
+}
+
 @media (max-width: 768px) {
     .data, .weather {
         position: static;  
         width: 80%;  
         margin: 10px auto;  
+        transform: none; /* Reset transform for smaller screens */
     }
 
     .image-container {
@@ -81,29 +110,26 @@ header {
         width: 100vw; 
         height: 50vh; 
     }
+
+    h1 {
+        font-size: 2.5rem; /* Adjust size for header */
+    }
+    .data h2, .weather h2 {
+        font-size: 1.5rem; /* Adjust subheading sizes */
+    }
 }
 
-/* Hover */
-.weather, .data{
-    transition: background-color 0.3s ease, color 0.3s ease; 
-}
-
-
-.weather:hover {
+.weather:hover, .data:hover {
     background-color: rgba(255, 255, 255, 0.8); 
     color: #007bff; 
+    transform: scale(1.05);
+    z-index: 10; /* Bring the hovered element to the front */
 }
-
-
-.data:hover {
-    background-color: rgba(255, 255, 255, 0.8); 
-    color: #007bff; 
-}
-
 
 footer {
     background-color: var(--primary-bg-color);
     color: var(--text-color);
     text-align: center;
     padding: var(--padding);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
