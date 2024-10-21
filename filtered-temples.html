@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <meta name="description" content="This is a Temple Album">
+    <meta name="author" content="Ferrin Mutuku">
+    <link rel="stylesheet" href="styles/filtered-temples.css" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css" media="(min-width: 768px)">
+    <script src="scripts/filtered-temples.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="hamburger">&#9776;</button> 
+        <nav id="menu">
+            <ul>
+                <li><a href="#home" id="home-button">Home</a></li>
+                <li><a href="#old" id="old-button">Old</a></li>
+                <li><a href="#new" id="new-button">New</a></li>
+                <li><a href="#large" id="large-button">Large</a></li>
+                <li><a href="#small" id="small-button">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="gallery">
+            <h2>Home</h2>
+            <div id="temple-container"></div> 
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="footer-year"></span>. Last modified: <span id="footer-modified"></span>.</p>
+    </footer>
+</body>
+</html>
