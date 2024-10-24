@@ -81,7 +81,7 @@ figure {
     margin: 20px;
     overflow: hidden;
     transition: transform 0.3s ease;
-    aspect-ratio: 3/4; 
+    aspect-ratio: 3/4;
 }
 
 figure img {
