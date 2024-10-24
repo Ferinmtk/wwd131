@@ -50,7 +50,7 @@
     }
 
     footer {
-        width: 75%; /* Align footer with content */
+        width: 75%; 
     }
 }
 
@@ -60,10 +60,10 @@
     }
 
     h1, h2, h3 {
-        font-size: 1.5em; /* Increase font size for headings */
+        font-size: 1.5em; 
     }
 
     body {
-        font-size: 1.1em; /* Slightly increase body font size */
+        font-size: 1.1em; 
     }
 }

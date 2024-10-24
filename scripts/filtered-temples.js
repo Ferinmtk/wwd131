@@ -144,6 +144,6 @@ const temples = [
   document.getElementById('footer-modified').textContent = document.lastModified;
 
   
-  // Display all temples on page load (home)
+ 
   filterTemples('home');
   
