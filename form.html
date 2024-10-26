@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Product Review Form</h1>
+        <form id="reviewForm" method="get" action="review.html">
+            <label for="productName">Product Name:</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Select a Product...</option>
+            </select>
+            <fieldset>
+                <legend>Overall Rating:</legend>
+                <label><input type="radio" name="rating" value="1" required> ☆</label>
+                <label><input type="radio" name="rating" value="2"> ☆☆</label>
+                <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
+                <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
+                <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
+            </fieldset>
+            <label for="installationDate">Date of Installation:</label>
+            <input type="date" id="installationDate" name="installationDate" required>
+            <fieldset>
+                <legend>Useful Features (check all that apply):</legend>
+                <label><input type="checkbox" name="features" value="Feature1"> Voice match</label>
+                <label><input type="checkbox" name="features" value="Feature2"> Remote Control</label>
+                <label><input type="checkbox" name="features" value="Feature3"> Phone control</label>
+                <label><input type="checkbox" name="features" value="Feature4"> Assistant</label>
+            </fieldset>
+            <label for="reviewText">Written Review:</label>
+            <textarea id="reviewText" name="reviewText"></textarea>
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName" name="userName">
+            <button type="submit">Submit Review</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Ferrin Mutuku, Kenya</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
