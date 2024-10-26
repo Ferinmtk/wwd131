@@ -1,6 +1,14 @@
+/* Global CSS Variables */
+:root {
+    --primary-bg-color: #8b0000;
+    --overlay-color: rgba(0, 0, 0, 0.6); 
+    --text-color: white; 
+    --font-family: 'Roboto', sans-serif; /* Updated font-family */
+    --padding: 10px; 
+}
 /* General Layout */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
