@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papi B Sales</title>
+    <meta name="description" content="This is a shopping website">
+    <meta name="author" content="Ferrin Mutuku">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/shopping.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="scripts/shopping.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="cart-count">
+            <span class="cart-icon">🛍️</span> 
+            <span class="cart-items">0</span>
+            <div id="cart-modal" class="cart-modal">
+                <div class="cart-modal-content">
+                    <span id="close-modal" class="close">&times;</span>
+                    <h2>Your Cart</h2>
+                    <ul id="cart-list"></ul>
+                    <button id="checkout-button" class="checkout-button">Checkout</button>
+                </div>
+                <div id="toast">Message</div>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="images/logo_1.png" srcset="images/logo_1.png 800w" alt="Company Logo" width="200" height="100" loading="lazy">
+        </div>
+
+        <nav class="navbar">
+            <a href="shopping.html">Home</a>
+            <a href="about-shopping.html">About</a>
+            <a href="product-shopping.html">Products</a>
+        </nav>
+        
+        <h1>Handmade Crafts</h1>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." id="search-input">
+            <button class="search-button" id="search-button">Search</button>
+        </div>
+    </header>
+
+    <div class="product-page">
+        <main class="main-content">
+            <div class="product-images">
+                <img class="main-image" src="images/craft_main.jpg" alt="Product Image" width="600" height="400" loading="lazy">
+                <div class="thumbnail-images">
+                    <img src="images/craft_2.avif" alt="Thumbnail 1" width="150" height="150" loading="lazy">
+                    <img src="images/craft_3.jpg" alt="Thumbnail 2" width="150" height="150" loading="lazy">
+                    <img src="images/craft_4.jpg" alt="Thumbnail 3" width="150" height="150" loading="lazy">
+                </div>
+            </div>
+            <div class="product-details">
+                <p class="product-name">Patootie Baskets</p>
+                <p class="product-price">$79.99</p>
+                <p class="product-description">These exquisite sisal baskets are meticulously handcrafted using traditional Kenyan basket weaving techniques that have been passed down through generations. Each basket is made entirely in Kenya from sustainably-sourced sisal fiber.
+                    <br><br>Styles, Sisal baskets, Patterns, Storage baskets, Home decor, Florists, Interior designs, Basketry, Interior style, Decor, Kiondo,
+                    Home and Interior, Woven decor, handmade, Stylish interior, Texture,
+                    Ethically sourced, Baskets, Bohemian, Interior, Boho chic, Colours, Boho, Kenyan baskets
+                </p>
+                <div class="rating">
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9733;</span>
+                    <span class="star">&#9734;</span>
+                    <span>(4/5)</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </main>
+
+        <section class="customer-reviews">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-list">
+                <div class="review-item">
+                    <p class="review-author">John Doe</p>
+                    <p class="review-text">Amazing product! Really loved the taste and packaging.</p>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <p class="review-author">Jane Smith</p>
+                    <p class="review-text">Good quality but a bit overpriced.</p>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <p class="review-author">Alice Brown</p>
+                    <p class="review-text">Decent product, but I expected more flavor.</p>
+                    <div class="rating">
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                        <span class="star">&#9734;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="add-review">
+                <h3>Add Your Review</h3>
+                <form id="review-form" action="#" method="post">
+                    <textarea placeholder="Write your review here..." id="review-text" required></textarea>
+                    <button type="submit" class="submit-review">Submit Review</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <h2>Related Products</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <a href="product1.html">
+                        <img src="images/related_1.jpg" alt="Product 1" width="200" height="200" loading="lazy">
+                        <p class="product-name">Patootie Baskets</p>
+                        <p class="product-price">$49.99</p>
+                    </a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <a href="product2.html">
+                        <img src="images/related_2.webp" alt="Product 2" width="200" height="200" loading="lazy">
+                        <p class="product-name">Maasai Pride Bracelets</p>
+                        <p class="product-price">$59.99</p>
+                    </a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <a href="product3.html">
+                        <img src="images/related_3.jpg" alt="Product 3" width="200" height="200" loading="lazy">
+                        <p class="product-name">Kilimani Woven Wonders</p>
+                        <p class="product-price">$29.32</p>
+                    </a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <a href="product14.html">
+                        <img src="images/related_4.jpg" alt="Product 4" width="200" height="200" loading="lazy">
+                        <p class="product-name">African Silhouette Sunset</p>
+                        <p class="product-price">$29.99</p>
+                    </a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Papi B Sales. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
